@@ -1,7 +1,7 @@
 require '../SparqlTransmission/lib/SparqlTransmission'
 require 'FindPredicats'
 
-Shoes.app :title => "ShoesPARQL", :width => 954, :height => 611 do
+Shoes.app :title => "ShoesPARQL", :width => 954, :height => 611, :resizable => false do
 
   background "background.png"
 
@@ -10,10 +10,10 @@ Shoes.app :title => "ShoesPARQL", :width => 954, :height => 611 do
   stack :width => 400, :top => 270, :margin => 30 do
     @url = edit_line "http://dbpedia.org/sparql", :width => "100%"
     @query = edit_box %[
-      SELECT ?subject ?predicat ?object 
+      SELECT ?subject 
       WHERE 
       { 
-        ?subject ?predicat ?object
+         ?subject <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>
       }
       ], :width => "100%", :height => 200
 
