@@ -1,4 +1,4 @@
-require 'SparqlTransmission/lib/SparqlTransmission'
+require 'SparqlTransmission'
 require 'FindPredicats'
 require 'examples'
 
